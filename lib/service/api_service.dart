@@ -7,11 +7,7 @@ import '../model/reel_model.dart';
 
 class ApiService {
   static final List<String> _videos = [];
-
-  /// Simulate API call to fetch videos and update the internal list
   static Future<List<String>> getVideos({int id = 0}) async {
-    // Determine the page based on the id parameter
-
     final page = (id / kNextLimit).ceil();
     currentpage = currentpage + 1;
     int p = currentpage == 0 ? 1 : currentpage;
